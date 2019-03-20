@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小怪物加载页面</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		#content{
+			width: 100%;
+			height: 100%;
+			background-color: #ffb3a7;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.monster{
+			width: 100px;
+			height: 100px;
+			border-radius: 25px;
+			margin: 0 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
+			position: relative;
+			left: 0;
+			top: 0;
+			background-color: #fff;
+			animation: jump 0.7s infinite alternate;
+
+		}
+		.monster:before{
+			content: "";
+			display: block;
+			width: 25px;
+			height: 8px;
+			border-radius: 25px;
+			background-color: #fff;
+			position: absolute;
+			top: -9px;
+			left: 10px;
+			transform: rotateZ(45deg);
+
+		}
+		.monster:after{
+			content: "";
+			display: block;
+			width: 25px;
+			height: 8px;
+			border-radius: 25px;
+			background-color: #fff;
+			position: absolute;
+			top: -9px;
+			right: 10px;
+			transform: rotateZ(-45deg);
+		}
+		.prompt{
+			color: #fff;
+			font-size: 25px;
+			font-weight: bold;
+			margin-right: 10px;
+		}
+		#monster1{
+			background-color: #fff;
+		}
+		#monster2{
+			background-color: #6b6b6b;
+			animation-delay: 0.7s;
+		}
+		#monster3{
+			transition: all 1.5s;
+			background-color: #fff;
+		}
+		#monster1:before{
+			background-color: #fff;
+		}
+		#monster1:after{
+			background-color: #fff;
+		}
+		#monster2:before{
+			background-color: #6b6b6b;
+		}
+		#monster2:after{
+			background-color: #6b6b6b;
+		}
+		.eye{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			margin-bottom: 13px;
+			position: relative;
+			top: 0;
+			left: 0;
+		}
+		.eyecolor1{
+			background-color: #4e4e4e;
+		}
+		.eyecolor2{
+			background-color: #e4e4e4;
+		}
+		.mouth{
+			width: 33px;
+			height: 10px;
+			border-radius: 10px;
+			background-color: #ffb3a7;
+		}
+		.eyeball1{
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: #f00;
+			position: absolute;
+			left: 0px;
+			top: 10px;
+			animation: turn 1s infinite alternate;
+		}
+		.eyeball2{
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: #1c00ff;
+			position: absolute;
+			left: 0px;
+			top: 10px;
+			animation: turn 1s infinite alternate;
+		}
+		@keyframes jump{
+			form{
+				top: 0px;
+				box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
+			}
+			to{
+				top: -50px;
+				box-shadow: 0px 60px 20px rgba(0,0,0,0.2);
+			}
+		}
+		@keyframes turn{
+			0%,
+			10%{
+				left: 0px;
+			}
+			90%,
+			100%{
+				left: 20px;
+			}
+		}
+		@font-face{
+			font-family: "北岸楷书";
+			src:url(font/北岸硬笔楷书.ttf);
+		}
+
+
+		#upload{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			background-color: #ffd8a7;
+			transition: all 1.5s;
+		}
+		.out{
+			opacity: 0;
+		}
+		.spin{
+			transform: rotateZ(720deg);
+		}
+		.bar{
+			width: 400px;
+			height: 15px;
+			border-radius: 25px;
+			background-color: #838383;
+			margin-top: 30px;
+			box-shadow: -5px -5px 4px #000 inset;
+		}
+		.proguess{
+			width: 0%;
+			height: 100%;
+			border-radius: 25px;
+			background-color: #6ff2ff;
+			box-shadow: 5px 5px 4px rgba(255,255,255,0.4) inset;
+		}
+		.hint{
+			margin-top: 10px;
+			font-family: "北岸楷书";
+			color: #f00;
+			/*text-shadow: 0px 0px 4px #000;*/
+			font-size: 32px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="content">
+		<div class="prompt">I'm monster!<br>I want to eat everything</div>
+		<div id="monster1"  class="monster">
+			<div class="eye eyecolor1">
+				<div class="eyeball1"></div>
+			</div>
+			<div class="mouth"></div>
+		</div>
+		<div id="monster2" class="monster">
+			<div class="eye eyecolor2">
+				<div class="eyeball2"></div>
+			</div>
+			<div class="mouth"></div>
+		</div>
+	</div>
+	<div id="upload">
+		<div id="monster3"  class="monster">
+			<div class="eye eyecolor1">
+				<div class="eyeball1"></div>
+			</div>
+			<div class="mouth"></div>
+		</div>
+		<div class="bar">
+			<div class="proguess"></div>
+		</div>
+		<div class="hint">加载中......(<span> 0 </span> %)</div>
+	</div>
+
+
+	<script type="text/javascript">
+	var proguess = document.getElementsByClassName('proguess')[0];
+	var hint = document.getElementsByClassName('hint')[0].getElementsByTagName('span')[0];
+	var upload = document.getElementById('upload');
+	var monster = document.getElementById('monster3');
+	var i = 0;
+	var time = window.setInterval(function(){
+		i++;
+		if(i >= 100){
+			clearInterval(time);
+			upload.className = "out";
+			monster.className = "spin";
+
+		}
+		hint.innerHTML = i;
+		proguess.style.width = i+"%";
+	},80);
+
+
+
+	</script>
+</body>
+</html>
