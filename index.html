@@ -68,6 +68,10 @@
 			font-weight: bold;
 			margin-right: 10px;
 		}
+		.prompt a{
+			color: #fff;
+			text-decoration: none;
+		}
 		#monster1{
 			background-color: #fff;
 		}
@@ -246,6 +250,9 @@
 			clearInterval(time);
 			upload.className = "out";
 			monster.className = "spin";
+			window.setTimeout(function(){
+				upload.style.display = "none";
+			},1500)
 
 		}
 		hint.innerHTML = i;
