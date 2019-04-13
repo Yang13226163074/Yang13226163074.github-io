@@ -2,85 +2,99 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>QQ音乐</title>
 	<link rel="icon" type="image/x-icon" href="images/QQmusicLogo.ico">
-	<link rel="stylesheet" href="jquery.mCustomScrollbar.css">
-	<link rel="stylesheet" href="index.css">
-	<script type="text/javascript" src="jquery.js"></script>
-	<script type="text/javascript" src="jquery.mCustomScrollbar.js"></script>
-	<script type="text/javascript" src="musicPlay.js"></script>
-	<script type="text/javascript" src="MusicProgess.js"></script>
-	<script type="text/javascript" src="lyrice.js"></script>
-	<script type="text/javascript" src="index.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script type="text/javascript" src="js/musicPlay.js"></script>
+	<script type="text/javascript" src="js/MusicProgess.js"></script>
+	<script type="text/javascript" src="js/lyrice.js"></script>
 </head>
 <body>
-<div id="head">
-	<div class="logo_name">QQ音乐</div>
-	<div class="login">
-		<a href="#">登录</a>
-		<a href="#">设置</a>
-	</div>
-</div>
-<div id="content">
-	<div id="content_left">
-		<div id="content_left_head">
-			<ul>
-				<li><i class="icons1"></i><a href="javascript:;">收藏</a></li>
-				<li><i class="icons2"></i><a href="javascript:;">添加到</a></li>
-				<li><i class="icons3"></i><a href="javascript:;">下载</a></li>
-				<li class="clearMusic"><i class="icons4"></i><a href="javascript:;">删除</a></li>
-				<li class="clearList"><i class="icons5"></i><a href="javascript:;">清空列表</a></li>
-			</ul>
-		</div>
-	 	<div class="content_left_content" data-mcs-theme="minimal-dark">
-			<ul class="content_left_ul">
-				<li>
-					<div class="list_check list_check_all" ><i></i></div>
-					<div class="list_number">&nbsp;</div>
-					<div class="list_name">歌曲</div>
-					<div class="list_singer">歌手</div>
-					<div class="list_time">时长</div>
-				</li>
-				<!-- <li class="list_music">
-					<div class="list_check"><i></i></div>
-					<div class="list_number">1</div>
-					<div class="list_name">
-						云林
-						<div class="list_menu">
-							<a href="javascript:;" title="播放" class="list_menu_play"></a>
-							<a href="javascript:;" title="添加"></a>
-							<a href="javascript:;" title="下载"></a>
-							<a href="javascript:;" title="分享"></a>
+	<header class="container-fluid navbar-fixed-top">
+		<nav class="navbar navbar-default navbar-default2">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed navbar-toggle2" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="navbar-toggle-span"></span>
+		        <span class="navbar-toggle-span2"></span>
+		      </button>
+		      <a class="navbar-brand" href="#" id="QQmusic">QQ音乐</a>
+		    </div>
+		    <div class="collapse navbar-collapse navbar-contant b1" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">登录</a></li>
+		        <li><a href="#">注册</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+	</header>
+	<section class="container music">
+		<div class="row">
+			<section class="col-md-8">
+				<div class="music-nav row">
+					<div class="hidden-xs col-sm-2 text-center"><a href="javascript:;"><span></span>收藏</a></div>
+					<div class="hidden-xs col-sm-2 text-center"><a href="javascript:;"><span></span>添加到</a></div>
+					<div class="hidden-xs col-sm-2 text-center"><a href="javascript:;"><span></span>下载</a></div>
+					<div class="hidden-xs col-sm-2 text-center clearMusic"><a href="javascript:;"><span></span>删除</a></div>
+					<div class="hidden-xs col-sm-2 text-center clearList"><a href="javascript:;"><span></span>清空列表</a></div>
+				</div>
+				<div class="content_left_content" data-mcs-theme="minimal-dark">
+				<div class="music-list">
+						<div class="row">
+							<div class="col-sm-1 col-xs-1"><span class="list_check list_check_all"></span></div>
+							<div class="col-sm-7 col-xs-11"><span></span>歌曲</div>
+							<div class="col-sm-2 hidden-xs">歌手</div>
+							<div class="col-sm-2 hidden-xs">时长</div>
 						</div>
+						<!-- <div class="row list-music">
+							<div class="col-sm-1 col-xs-1"><span></span></div>
+							<div class="col-sm-7 col-xs-11"><span>1</span>
+							夏之音
+								<div class="list_menu">
+									<a href="javascript:;" title="播放" class="list_menu_play"></a>
+									<a href="javascript:;" title="添加"></a>
+									<a href="javascript:;" title="下载"></a>
+									<a href="javascript:;" title="分享"></a>
+								</div>
+							</div>
+							<div class="col-sm-2 hidden-xs list-name">博丽灵梦</div>
+							<div class="col-sm-2 hidden-xs list-time">
+								<p>3.28</p>
+								<a href="javascript:;" title="删除"></a>
+							</div> 
+						</div>-->
 					</div>
-					<div class="list_singer">博丽灵梦</div>
-					<div class="list_time">
-					<span>03.28</span><a href="javascript:;" class="list_delete" title="删除"></a></div>
-				</li> -->
-			</ul>
-	 	</div>
-	</div>
-	<div id="content_rigth">
-		<div class="song_img"><img src="images/player_cover.png" alt=""></div>
-		<div class="song_name">歌曲名：<span>无</span></div>
-		<div class="songer_name">歌手名：<span>无</span></div>
-		<div class="song_ablum">专辑名：<span>无</span></div>
-		<div class="song_lyrice">
-			<ul>
-			</ul>
+				</div>
+			</section>
+			<section class="col-md-4 hidden-xs hidden-sm content_rigth">
+				<div class="song_img"><img src="images/player_cover.png" alt=""></div>
+				<div class="song_name">歌曲名：<span>无</span></div>
+				<div class="songer_name">歌手名：<span>无</span></div>
+				<div class="song_ablum">专辑名：<span>无</span></div>
+				<div class="song_lyrice">
+					<ul>
+					</ul>
+				</div>
+			</section>
 		</div>
-	</div>
-</div>
+	</section>
 <div class="onlyMode">
 	<ul>
 	</ul>
-</div>
-	<div id="foot">
-		<div class="footer_in">
-			<a href="javascript:;" class='music_pre'></a>
-			<a href="javascript:;" class='music_play'></a>
-			<a href="javascript:;" class='music_next'></a>
-			<div class="music_progess_info">
+</div> 
+<footer class="container-fluid navbar-fixed-bottom">
+	<div class="row">
+		<div class="col-sm-7 col-xs-12 row music-play ">
+			<div class="col-xs-1"><a href="javascript:;"><span class="glyphicon glyphicon-fast-backward music_pre"></span></a></div>
+			<div class="col-xs-1"><a href="javascript:;"><span class="glyphicon glyphicon-play music_playing"></span></a></div>
+			<div class="col-xs-1"><a href="javascript:;"><span class="glyphicon glyphicon-fast-forward music_next"></span></a></div>				
+			<div class="col-sm-9 col-xs-9 music_progess_info">
 				<div class="music_progess_top">
 					<span class="music_progess_name">无 / 无</span>
 					<span class="music_progess_time">00:00 / 00：00</span>
@@ -90,23 +104,33 @@
 					<div class="music_progess_line"></div>
 				</div>
 			</div>
-			<a href="javascript:;" class='music_mode music_mode1'></a>
-			<a href="javascript:;" class='music_fav' title="喜欢"></a>
-			<a href="javascript:;" class='music_down' title="下载"></a>
-			<a href="javascript:;" class='music_comment'></a>
-			<a href="javascript:;" class='music_only' title="打开纯净模式"></a>
-			<div class="music_voice_info">
-				<a href="javascript:;" class="music_voice_icon" title="关闭声音"></a>
-				<div class="music_voive_bar">
-					<div class='music_voive_doc'></div>
-					<div class="music_voive_line"></div>
-				</div>
+		</div>
+		<div class="col-md-3 col-sm-5 row music-control hidden-xs" >
+			<div class="col-sm-2 "><a href="javascript:;" class="music_mode music_mode1"></a></div>
+			<div class="col-sm-2 "><a href="javascript:;" class="music_fav"></a></div>
+			<div class="col-sm-2 "><a href="javascript:;" class="music_down"></a></div>
+			<div class="col-sm-2 "><a href="javascript:;" class="music_comment"></a></div>
+			<div class="col-sm-4 "><a href="javascript:;" class="music_only"></a></div>
+		</div>
+		<div class="col-md-2 hidden-sm hidden-xs row music_voice_info">
+			<div class="col-md-3"><a href="javascript:;" class="music_voice_icon" title="关闭声音"></a></div>
+			<div class="col-md-9 music_voive_bar">
+				<div class='music_voive_doc'></div>
+				<div class="music_voive_line"></div>
 			</div>
+
+
 		</div>
 	</div>
-</body>
+</footer>
 <div class="mack_bg"></div>
 <div class="mack"></div>
 
 <audio src=""></audio>
+
+    <script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
 </html>
