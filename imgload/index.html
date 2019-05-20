@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片预加载</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<script type="text/javascript">
+		var html = document.documentElement;
+		var htmlw = html.clientWidth;
+		html.style.fontSize = htmlw/15+"px";
+	</script>
+	<style>
+	header{
+		height: 50px;
+	  background: -webkit-linear-gradient(#75ddff , #ffa6c2); 
+	  background: -o-linear-gradient( #75ddff, #ffa6c2); 
+	  background: -moz-linear-gradient( #75ddff, #ffa6c2);
+	  background: linear-gradient(#75ddff , #ffa6c2);
+	  color: #fff;
+	  /*margin-bottom: 20px;*/
+	  text-align: center;
+	  font-size: 18px;
+	  line-height: 50px;
+	}
+	*{
+		font-size: 18px;
+		margin: 0;`
+		padding: 0;
+		color: #808080
+	}
+	img{
+		width: 190px;
+		display: inline-block;
+	}
+	.images{
+		position: absolute;
+		/*display: none;*/
+
+	}
+	.images>img{
+		box-shadow: 0 0 5px 0px #ccc;
+
+	}
+	#context{
+		width: auto;
+		top: 0;
+		left: 0;
+		position:relative;
+		display: inline-block;
+		margin: 0 auto;
+	}
+	option{
+		text-align: center;
+		display: none;
+
+	}
+	</style>
+</head>
+<body>
+	<header>图片浏览</header>
+	<section id="context">
+	</section>
+	<option>加载更多......</option>
+
+	<script type="text/javascript" src="js/imgesToLoad.js"></script>
+	<script type="text/javascript" src="js/index.js"> </script>
+</body>
+</html>
